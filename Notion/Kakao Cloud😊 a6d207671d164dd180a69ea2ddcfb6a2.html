@@ -1,0 +1,698 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Kakao Cloud😊</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a6d20767-1d16-4dd1-80a6-9ea2ddcfb6a2" class="page mono"><header><div class="page-header-icon undefined"><img class="icon" src="Kakao%20Cloud%F0%9F%98%8A%20a6d207671d164dd180a69ea2ddcfb6a2/a85d0594017900001.jpg"/></div><h1 class="page-title">Kakao Cloud😊</h1></header><div class="page-body"><p id="a3ea11bf-4b75-496f-8bc3-fc040ec13958" class="">성함 : 문성훈 강사님</p><p id="2ac93cb6-4b8a-467c-ad3b-b71a69d27780" class="">Email: moon9342@gmail.com</p><p id="67e5f534-ad8a-4afb-9ac2-7eda9b01eb86" class="">커리큘럼: ECMA Script → React → JAVA → DB → Servlet → Spring Boot</p><p id="755e5a54-54b4-46f7-8183-fbfcc60b1c1b" class="">
+</p><p id="7fd495ed-6b44-4164-96d6-b170d7df9703" class="">JavaScript = prototype 기반의 함수형 언어</p><p id="4add7810-907d-4a97-b950-084722a26889" class="">JavaScript = ECMA Script + Client Side Web API(DOM, BOM)<div class="indented"><p id="e368b529-e431-4114-984c-4991343df678" class="">                                       Host API</p></div></p><p id="8da3abdd-206d-405b-9d17-4ab5eb362525" class="">ECMA Script  = ES6 [ES5 대격변(언어,기능)]</p><p id="3b338762-12c9-4d13-bb23-a532dc5b4f44" class="">JQuery = 라이브러리를 사용(로직을 자신이 짠다) → 유지보수에 문제가 생김</p><p id="0c9405d7-6ee0-4309-b779-a22df9301a9f" class="">HTML = 정형성문제(문법이 틀려도 작동)<div class="indented"><p id="fc3d062e-99ea-4a15-8583-38db7ef768fe" class="">     확장성문제(태그가 정해져 있어서 유저가 태그를 만들지 못함)</p></div></p><p id="5b604689-2a33-4a78-bdef-0344d86342a1" class="">XHTML 1.0 = HTML문제를 해결하기 위해 XML 추가(W3C 표준)</p><p id="e288566b-08a6-4d79-ae35-8208ff551843" class="">WHATWG = HTML 자체를 발전시킴 → HTML 5(표준화)(애플,구글 참여)</p><p id="bf0183bb-cd8a-4b77-ae96-bb24256d2b7c" class="">HTML 5 = 브라우저 안에서 동작하는 웹 어플리케이션을 만드는것을 지향</p><p id="a2425a33-7652-4c83-a9f0-399aee8459c4" class="">HTML 5 = HTML (25%) + CSS 3 (5%) + JavaScript Web API (70%)</p><p id="92fc0d72-d8b7-4c84-b00c-63f2d2efb8c1" class="">
+</p><p id="3f4d49ac-dc5e-48b4-bc4d-c12f977214f5" class="">Package Manager : npm (모듈 간 버전을 맞춰준다)</p><p id="d0a88caf-3dac-4f4f-a92f-9aab68f70b68" class="">TransPiler : Type Script</p><p id="a896d719-261e-4cd1-b0e6-8483ec8a2132" class="">자동화 도구 : Build, Test, Deploy 자동화 → Gulp</p><p id="908f5b72-bede-4d49-b1c4-4142031f7ac3" class="">모듈화 : WebPack</p><p id="77f08e4e-7689-40d3-bcb3-aacf4ae93593" class="">FrameWork : Angular, React, Vue.js  (React ❗)</p><p id="909780dc-4b19-4c5e-a2f2-119665ad656a" class="">
+</p><p id="cf9d448a-2d3c-4384-9a2d-7d5e4655ce44" class="">JAVA Script 실행하려면 JAVA Script Engine이 필요하다.( browser안에 내장)</p><p id="49f73262-548f-4f7c-96cb-2d9ffd2a0774" class="">Chrome → V8 Engine          Node.js → (V8 Engine)</p><p id="bfd21112-3670-4054-87fd-dffe866e8975" class="">Edge → ChaKra Engine</p><p id="c422f5dd-4542-4c2e-8124-e07f9f24abde" class="">Safari → WebKit Engine</p><p id="2a8680eb-a251-4ab1-b3b4-ed5f8c02659b" class="">Firefox → Spider Monkey Engine</p><p id="3fabc614-f23d-4f09-8b1f-133d72a777ac" class="">
+</p><p id="4528e6b3-4a0d-4985-8547-257c79a7acdc" class="">변수 = 해당 메모리 주소를 가지고 있는 식별자</p><p id="76774480-d994-4060-817e-910e204b42f4" class="">식별자가 가지고 있는 값 = 메모리 주소</p><p id="e52b1baa-bc57-40c1-83c5-0442c2d730ae" class="">
+</p><p id="af4f0a51-0813-458d-8f48-bb1b1ada5d30" class="">var → function level scope(함수를 기준으로 스코프를 잡는다.)</p><p id="9730c844-92f7-4f00-9b67-03f52e08815f" class="">const, let →   block level scope (블록을 기준으로 스코프를 잡는다.)</p><p id="722eb241-48bc-439d-a33f-ff264591488e" class="">
+</p><p id="d1800710-f2d3-4fee-a11b-e337267f0fbc" class="">hoisting = 아래에서 선언한 변수가 위로 올라간다.</p><p id="7873f6ce-5c75-471f-89a1-084989a9b755" class="">JAVA는 2패스로 동작(먼저 변수들은 다 찾아내고 메모리를 할당)</p><p id="1e75cd93-bdb2-4eab-85d5-87341f3377ad" class="">→ 변수 선언은 runtime 이전에 수행</p><p id="6db5e80e-6c58-4121-8988-6506f895cc57" class="">→ 마치 변수선언이 해당 scope의 최상단으로 끌어 올려진것 같은 현상</p><p id="3eea6ac5-df52-472c-a349-7b0451dc0ea3" class="">
+</p><p id="36ccb8e1-4f46-49cd-a491-794223001f92" class="">*VAR KEYWORD로 변수선언시 주의점*</p><p id="72038a18-a1f3-4497-b8e5-2ded9ff2b381" class="">같은 변수의 이름이 존재하면 나중에 나오는 변수를 없는것처럼 여긴다.</p><p id="94403c91-8b1c-4d40-9cbf-dbd41f1a7b4b" class="">VAR KEYWORD가 키워드가 없는것처럼 동작</p><p id="08f55f1b-7ecf-464b-b8a3-9e67ee25baee" class="">초기화 구문이 없으면 무시, CODE ERROR가 안난다.</p><p id="382b9fc7-155c-472c-a62a-db1f08fbbf7e" class="">VAR 변수 스코프 주의❗</p><p id="bf5719f4-8c4e-489a-9399-38f4936fa003" class="">
+</p><p id="779b58d9-ea3a-4e44-9eaf-e93c00eafb70" class="">*let*</p><ol type="1" id="ab45bff7-9301-4fb8-adfe-55b3f984ff85" class="numbered-list" start="1"><li>중복선언 X</li></ol><ol type="1" id="3e27ecbc-6467-42c8-b720-9f94b035894e" class="numbered-list" start="2"><li>block-level scope를 생성</li></ol><ol type="1" id="c773a9a3-d557-4110-8e21-c9da0dc27903" class="numbered-list" start="3"><li>let을 이용하면 hoisting이 안되는 것처럼 보인다.(선언과 동시에 초기화 X)</li></ol><ol type="1" id="bf7b2ee3-8e0d-4748-9463-050c4c7f85e4" class="numbered-list" start="4"><li>let keyword로 변수를 선언하면 변수를 일시적으로 사용할 수 없는 구간 ⇒ Temporal Dead Zone이 생길 수 있다.</li></ol><p id="c5e85b5b-70dd-4ed0-9ea7-e2f17bb8cb3a" class="">
+</p><p id="4da40c9b-a633-40c8-98e4-7d8a41f99a6f" class="">*const*</p><p id="05576196-845a-40fd-99ab-14c892a1e8e2" class="">상수를 선언할 때 사용(변수에 대한 재할당 금지)</p><p id="8fffc8b5-caa8-477a-b081-d337166c0f51" class="">원시값은 불변의특성을 가진다.</p><p id="f8a28ac0-d39d-4d51-815b-b634bf2e9d47" class="">
+</p><p id="aced3b9f-8143-48c2-9d5e-c5b16ba72135" class="">*기본적인 용어정리*</p><p id="5c500255-9497-42da-bde9-359b0db43249" class="">1.literal</p><p id="bacb729d-eb04-4a67-b6e2-7ca4f0062288" class="">→ 특정값을 표현하기 위해서 사람이 이해할 수 있는 문자, 약속된 기호를 이용하는 notation(표기법)</p><p id="46a0421c-5d1c-4442-a972-dd11bfef6973" class="">ex) 3 ⇒ 숫자 literal</p><p id="570c3127-e307-431d-8c05-d899e13d6ce2" class="">‘hello’ , “hello”, `hello` =&gt; 문자 literal</p><p id="7f98340f-3ced-469e-b7d3-b0cde9c2b7ff" class="">null → 값이 없다는 상태를 나타내는 null literal(개발자가 직접사용하는 값 )</p><p id="97f19bbc-88a0-4373-974d-499c574b205d" class="">undefined → 초기화 되지 않은 변수를 나타내는 literal (JAVA Script Engine)</p><p id="6ee290a4-0d3d-4962-bded-05272f5dbf7d" class="">{’name’:’kim’} → 객체 literal</p><p id="91219bbc-db77-428a-803f-032e25f9be49" class="">[1,2,3] → 배열 literal</p><p id="80a4a944-22ca-431b-a6bf-5628cd1a9937" class="">function(){ } → 함수 literal</p><p id="da79efda-86de-421e-b954-3a1ddb441b2e" class="">
+</p><p id="5c0628c5-0e1a-4a79-ab1e-c2f25f4efd53" class="">2.statement(문)</p><p id="95600969-b4d4-4612-aaf2-0bda656af8c3" class="">→ 프로그램의 최소 실행 단위</p><p id="c9312336-c6ae-4237-b81f-9d27a318f1db" class="">→ 프로그램은 statement의 집합</p><p id="fe106ff8-2e88-49b1-8445-98749085d8a9" class="">→ ;(세미콜론) statement의 종결을 나타내는 표현</p><p id="465162b1-f87f-4416-8063-a907dab37c0f" class="">→ ASI 기능이 탑재되어 있다.(<strong>Automatic Semicolon Insertion) </strong>⇒<strong> </strong>자동 세미콜론</p><p id="8a8465b8-7203-4a04-8f83-1b3cf35ba125" class="">→ 블록({},[])은 self closing기능을 가지고있다. </p><p id="a319f990-cc37-45ea-a949-90d5393b00b2" class="">
+</p><p id="37b5a520-96de-4e12-92cc-3b287e0a9e83" class="">3.expression(식)</p><p id="eb627588-d7a3-4c29-b83d-c568c73784e3" class="">→ 평가과정을 통해 값으로 인식되는 구문</p><p id="d0518be2-8cdf-4ff5-a1e6-07eb0623d76c" class="">
+</p><p id="c2b668d8-9695-4964-b5da-cf81599a1423" class="">*Data Type*</p><p id="81d972a7-37c6-443b-95e1-77ba5668009b" class="">— 총 7개의 Data Type이 있다.</p><p id="b4b8876e-14c9-4ae6-b092-5c3e659fdbb0" class="">
+</p><p id="949be54b-d902-4526-8034-5d3877a8eed1" class="">1.Number Type → 정수,실수를 구분하지 않는다.</p><p id="13761b5b-f51a-4a52-a768-53b2053b8405" class="">→ 내부적으로 모든 숫자는 64-bit 실수로 처리한다.</p><p id="0dd514c3-0ed4-4ceb-8cf9-61988061c9cf" class="">→ Infinity : 양의 무한대</p><p id="cb8f6f2b-0567-410d-882d-145ec086b95a" class="">→ -Infinity : 음의 무한대</p><p id="e58d9532-7914-43c0-a562-9c9cee8cfae5" class="">→ NaN : Not a Number(숫자가 아니라는 의미지만 NaN은 숫자 Type), 산술연산 불가</p><p id="d9b48f31-a81d-4122-a4b7-4ef5afdfa3b7" class="">
+</p><p id="f1426cee-accf-4730-9e29-9dc14c472fdc" class="">2.String Type : ‘’(기본형태), ``(백틱) </p><p id="26f87a83-934c-4989-b331-83657bca0187" class="">→ Multi Line 문자열 표현 가능</p><p id="d4c6f9ef-e3d6-4f9c-bab1-463a20522a3a" class="">→ Expression Interpolation(표현식 삽입)</p><p id="4c53651b-5ccb-4db3-a0c3-0061a6421995" class="">
+</p><p id="e42bf6d9-891f-49b2-892f-363d9e49b4ff" class="">3.Boolean Type : true, false</p><p id="92f49ce3-ebe4-4d2b-b755-7ca767a8a3ef" class="">
+</p><p id="a4c0e253-4b27-497f-8ff5-cac1da7acebc" class="">4.Undefined Type : Undefined</p><p id="fa282631-ce47-426b-9ed8-5d3f257f882c" class="">
+</p><p id="f18b04ed-0987-4428-9697-51cb4956d0fd" class="">5.Null Type : Null</p><p id="1be5380c-88ff-4171-86d7-6d9d6627143d" class="">
+</p><p id="470bbf0a-9c03-4c27-a6e3-2c9c3d6a9b00" class="">6.Symbol Type (ES6) : Symbol 값(Unique)</p><p id="69f98599-1bab-45c8-8e95-85ae156c6665" class="">→ 눈으로 확인할 수 없다( 출력 X)</p><p id="46e69c7d-31d8-48c7-9fa1-91cb6974cd4b" class="">→ Symbol()을 이용해서 만든다.</p><p id="e3e3fa31-b940-42ef-ab48-11ca9f663f83" class="">→ 인자를 사용할 수 있지만 실제 Symbol값에 영향을 주지 않는다.</p><p id="3aca5ebc-790e-46c5-a1d3-7e92b982f1ad" class="">Symbol.for() → Symbol을 찾기 위한 메소드</p><p id="67ff2258-9131-49ee-9b67-e121dc5d86ed" class="">Key값을 이용해서 Symbol을 찾거나, 못찾으면 Symbol을 생성,등록,리턴</p><p id="d01750bc-e74c-47d4-b859-18f103cb9090" class="">→ Global Symbol Registry</p><p id="09d2da2e-c793-45a3-b64e-37689807fb7d" class="">
+</p><p id="35fa73a0-6b10-4a11-b38a-147aa9c3e677" class="">Symbol.KeyFor() →Symbol을 찾기 위한 KEY를 찾는 메소드</p><p id="6a4461be-fb8b-466e-89ca-409c3ebd36cc" class="">→ Symbol값으로 Key를 찾는다.</p><p id="f8727504-fd2e-42db-afa4-2c721f0d6c0d" class="">
+</p><p id="c62241da-3067-437b-8289-533c24f8446b" class="">→ 위에 6개 Data Type = Primitive Type (원시 타입)</p><p id="4a19c6c6-17a5-4f16-8c8c-0c8fd4611907" class="">— — — — — — — — — — — — — — — — — — — — — — — — — —</p><p id="fe57c9ac-c7d6-4655-8f95-e0b68e825908" class="">7.Object Type → Reference Type (참조 타입)</p><p id="064f5485-9951-4b87-9a22-e476af71fbda" class="">→ 나중에 다시 얘기해요❗</p><p id="aa08c99d-453e-4918-8d7d-2a0fdfff4cbc" class="">
+</p><p id="69eaf8b6-cef8-40ef-a958-bed7345ed2da" class="">* 변수에도 데이터 타입이 있나요?</p><p id="cb2b8159-da5c-481b-bbc4-eb92a3539f37" class="">
+</p><p id="b8da66b5-70b4-4d1c-9a0a-100254ce6c83" class="">JAVA Script는 변수에 값이 할당되는 시점에 Type이 결정된다.</p><p id="ef853934-21b3-491f-abf1-cabe522a977a" class="">→ Type inference (타입 추론) → dynamic typing (동적 타이핑)</p><p id="38d625fb-8acc-4fd8-b055-cd4b7bb91198" class="">→ 동적 타입이 일어나는 프로그래밍 언어</p><p id="2726d5b0-6932-4241-8fe6-cfc1cc6c1969" class="">dynamic type language</p><p id="aed56123-7427-4574-9ceb-74da87a710aa" class="">weak type language</p><p id="c39f1b4a-1b09-4157-a829-f86cc16785ab" class="">묵시적 타입변환 일어난다</p><p id="e9bd2039-9500-45a1-b358-6e49515ffed1" class="">염격한 문법이 적용되지 않아서 유연한 프로그래밍가능</p><p id="ddcd3e2a-76a7-4fd9-9e74-da39bdf98974" class="">효율적인 프로그래밍 가능</p><p id="43818dc3-9bfa-4c17-98fb-ea4f517e2b98" class="">신뢰도 하락</p><p id="07fe5a19-ece5-4773-8504-ef5015a585e0" class="">— — — — — — — — — — — — — — — — — — — — — — — — — — — </p><p id="fd1fbbd9-6996-4a44-84f3-e3fb94860ac9" class="">JAVA</p><p id="e847f02c-68b0-444c-af8e-bae676df6ed2" class="">→ 변수에 타입을 명시 </p><p id="ea979a72-37ac-4d48-b53e-356a82181aca" class="">→ 명시적 type언어 (동적 타입과 반대되는 개념)</p><p id="9f30776f-c534-4541-9d49-1af7dba78e4f" class="">static type language</p><p id="b00b9c15-90e7-405e-a15b-14573ae08183" class="">strong type language</p><p id="2b6b9904-6652-47fb-9798-2e545cf75b8c" class="">엄격한 문법 때문에 효율적이지 못한다.</p><p id="0cb42383-c268-4c36-bfb4-a84d1f23e0d3" class="">
+</p><p id="f444fad9-fff3-4ffb-acd2-d9cd12f66c58" class="">*형 변환(Operator)*</p><p id="ebf61149-2979-4e2c-ad0e-45a95eae6331" class="">⇒ String</p><ol type="1" id="21471d4b-8dfc-40ee-9b4c-e2024875f3ce" class="numbered-list" start="1"><li>String 생성자 함수 → new 없이 호출</li></ol><ol type="1" id="22ca8745-d2ca-44d6-8f8a-948028507640" class="numbered-list" start="2"><li>Object.prototype.toString() 호출</li></ol><ol type="1" id="a76862f7-f24c-4f39-bb5a-ab3b82fcd72f" class="numbered-list" start="3"><li>“+” 연산자 이용</li></ol><p id="c5b31896-8e65-4c8d-b988-523fcbe7600a" class="">
+</p><p id="41a99b40-96e1-491b-8544-e2fa22c728ca" class="">* “+” 연산자 *</p><p id="012685d1-25a2-4778-bf3e-199df5357c46" class="">피 연산자의 따라서 기능이 달라진다.(연산자 오버로딩)</p><p id="a4b081bd-e50a-4477-8329-a6c52dc29d9b" class="">ex) 2+2 = 4, “신재민” + “위수민” = Love</p><p id="74f6477d-b9e4-4b4e-859a-9c07f11d2de2" class="">
+</p><p id="cfd3472b-7cfa-4188-be12-fac9962c7b71" class="">== ⇒ loose equality (값만 비교)</p><p id="2535f7cb-15a3-4607-9e53-3316e99ccecb" class="">
+</p><p id="d8d9e4f3-ea7e-45d4-bf98-ce6f067e7e9f" class="">=== ⇒ Strict equality ( type과 값을 같이 비교)</p><p id="d1ce9c93-a929-4af4-926e-745e98758f94" class="">
+</p><p id="ec14aeb7-5a9d-4fee-a66d-77fb81ccd096" class="">typeof ⇒ data type을 알려주는데 표준 data type과 완벽히 일치하지는 않는다.</p><p id="4c1011ac-4422-4a81-a225-25b0a29f72df" class="">ex) typeof(null) ⇒ Object (bug)</p><p id="0ec1490a-3950-43ee-9190-3759056bb910" class="">
+</p></div></article></body></html>
