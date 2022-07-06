@@ -5,5 +5,5 @@ var obj = {
   "!myName": "김길동",
   myName: "김연아",
 };
-console.log(obj);
+console.log(obj); // { myName: '김연아' }
 console.log(obj.myAddress); // Undefined
